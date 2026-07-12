@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cách Mạng Tháng Tám 1945 | VNR202</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#E8625C;--coral-light:#FFF0EF;--coral-dark:#B8403B;--coral-mid:#F4A3A0;
+  --sky:#3B82F6;--sky-light:#EFF6FF;--sky-dark:#1D4ED8;
+  --mint:#10B981;--mint-light:#ECFDF5;--mint-dark:#047857;
+  --amber:#F59E0B;--amber-light:#FFFBEB;--amber-dark:#B45309;
+  --violet:#8B5CF6;--violet-light:#F5F3FF;--violet-dark:#6D28D9;
+  --indigo:#4F46E5;
+  --bg:#FAFAF8;--white:#FFFFFF;
+  --text:#1F2937;--text2:#6B7280;--text3:#9CA3AF;
+  --border:#E5E7EB;--border2:#D1D5DB;
+  --r:16px;--r-sm:10px;--r-xs:6px;
+  --shadow:0 1px 3px rgba(0,0,0,.04),0 4px 20px rgba(0,0,0,.06);
+  --shadow-md:0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg:0 8px 30px rgba(0,0,0,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+::selection{background:var(--coral);color:#fff}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(160deg,#1E293B 0%,#334155 50%,#475569 100%);padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;color:#fff}
+.hero::before{content:'';position:absolute;top:-100px;right:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,98,92,.2),transparent 70%)}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.15),transparent 70%)}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:6px 18px;border-radius:30px;letter-spacing:.06em;margin-bottom:18px;position:relative;backdrop-filter:blur(4px)}
+.hero-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--coral);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:'Noto Serif',serif;font-size:clamp(30px,5.5vw,48px);font-weight:900;line-height:1.15;margin-bottom:12px;position:relative}
+.hero h1 em{color:var(--coral);font-style:normal;position:relative}
+.hero h1 em::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:3px;background:var(--coral);border-radius:2px;opacity:.5}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.55);max-width:500px;margin:0 auto;line-height:1.7;position:relative}
+
+/* STATS ROW */
+.stats-row{display:flex;justify-content:center;gap:12px;margin-top:2rem;position:relative;flex-wrap:wrap}
+.stat-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(8px);border-radius:14px;padding:16px 24px;text-align:center;min-width:100px;transition:transform .2s}
+.stat-card:hover{transform:translateY(-3px)}
+.stat-card .num{font-family:'Noto Serif',serif;font-size:28px;font-weight:900;display:block}
+.stat-card:nth-child(1) .num{color:var(--coral)}
+.stat-card:nth-child(2) .num{color:var(--sky)}
+.stat-card:nth-child(3) .num{color:var(--amber)}
+.stat-card:nth-child(4) .num{color:var(--violet)}
+.stat-card .lbl{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px;letter-spacing:.04em}
+
+/* ===== TAB BAR ===== */
+.tab-bar{display:flex;justify-content:center;gap:6px;padding:14px 1rem;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.tab{padding:10px 22px;border-radius:30px;border:1.5px solid var(--border);background:var(--white);color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .25s;display:flex;align-items:center;gap:7px}
+.tab:hover{border-color:var(--text3);color:var(--text);box-shadow:var(--shadow)}
+.tab.active{border-color:transparent;color:#fff;box-shadow:var(--shadow-md)}
+.tab[data-c="coral"].active{background:linear-gradient(135deg,var(--coral),#D64A44)}
+.tab[data-c="sky"].active{background:linear-gradient(135deg,var(--sky),#2563EB)}
+.tab[data-c="amber"].active{background:linear-gradient(135deg,var(--amber),#D97706)}
+.tab[data-c="violet"].active{background:linear-gradient(135deg,var(--violet),#7C3AED)}
+
+section{display:none;padding:2rem 1.5rem;max-width:800px;margin:0 auto}
+section.active{display:block}
+
+/* ===== ACCORDION ===== */
+.acc-group{margin-bottom:14px}
+.acc-header{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:all .25s;user-select:none;box-shadow:0 1px 3px rgba(0,0,0,.02)}
+.acc-header:hover{border-color:var(--coral-mid);box-shadow:var(--shadow);transform:translateY(-1px)}
+.acc-header.open{border-radius:var(--r) var(--r) 0 0;border-color:var(--coral);border-bottom-color:transparent;box-shadow:var(--shadow)}
+.acc-num{font-family:'Noto Serif',serif;font-size:26px;font-weight:900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--coral-light);color:var(--coral);flex-shrink:0}
+.acc-title{flex:1}
+.acc-title h3{font-size:15px;font-weight:700;color:var(--text)}
+.acc-title p{font-size:12px;color:var(--text3);margin-top:3px}
+.acc-arrow{font-size:14px;color:var(--text3);transition:transform .3s;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--bg)}
+.acc-header.open .acc-arrow{transform:rotate(180deg);color:var(--coral);background:var(--coral-light)}
+.acc-body{display:none;border:1.5px solid var(--coral);border-top:none;border-radius:0 0 var(--r) var(--r);padding:1.5rem;background:var(--white);box-shadow:0 4px 12px rgba(232,98,92,.06)}
+.acc-body.show{display:block}
+.kb{font-size:13px;color:var(--text2);line-height:1.85}
+.kb strong{color:var(--text)}
+.kb em{color:var(--coral);font-style:normal;font-weight:600}
+.kb ul{margin:6px 0 10px 18px}
+.kb li{margin-bottom:5px}
+.kb-box{border-radius:var(--r-sm);padding:14px 16px;margin:12px 0;border-left:4px solid var(--coral);background:var(--coral-light)}
+.kb-box.sky{background:var(--sky-light);border-left-color:var(--sky)}
+.kb-box.mint{background:var(--mint-light);border-left-color:var(--mint)}
+.kb-box.amber{background:var(--amber-light);border-left-color:var(--amber)}
+.kb-box h4{font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text);display:flex;align-items:center;gap:6px}
+
+/* ===== GAME SHARED ===== */
+.game-box{max-width:600px;margin:0 auto}
+.launch{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:3rem 2rem;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.launch::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.launch.l-sky::before{background:linear-gradient(90deg,var(--sky),var(--indigo))}
+.launch.l-amber::before{background:linear-gradient(90deg,var(--amber),var(--coral))}
+.launch.l-violet::before{background:linear-gradient(90deg,var(--violet),#EC4899)}
+.launch-icon{font-size:56px;margin-bottom:12px}
+.launch h2{font-family:'Noto Serif',serif;font-size:22px;font-weight:800;margin-bottom:8px}
+.launch p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:20px;max-width:380px;margin-left:auto;margin-right:auto}
+.chips{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.chip{font-size:11px;font-weight:600;background:var(--bg);color:var(--text2);padding:6px 14px;border-radius:20px;border:1px solid var(--border)}
+.btn-go{padding:14px 40px;border-radius:30px;border:none;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .25s;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.btn-go:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.btn-coral{background:linear-gradient(135deg,var(--coral),#D64A44)}
+.btn-sky{background:linear-gradient(135deg,var(--sky),#2563EB)}
+.btn-amber{background:linear-gradient(135deg,var(--amber),#D97706)}
+.btn-violet{background:linear-gradient(135deg,var(--violet),#7C3AED)}
+
+/* quiz */
+.meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:13px;color:var(--text3)}
+.pts{font-weight:700;font-size:16px}
+.pts-sky{color:var(--sky)}.pts-amber{color:var(--amber)}
+.track{height:6px;background:var(--border);border-radius:10px;margin-bottom:1.5rem;overflow:hidden}
+.fill{height:100%;border-radius:10px;transition:width .4s}
+.fill-sky{background:linear-gradient(90deg,var(--sky),var(--indigo))}
+.fill-amber{background:linear-gradient(90deg,var(--amber),var(--coral))}
+.fill-coral{background:var(--coral)}
+.gcard{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:1.75rem;box-shadow:var(--shadow)}
+.round-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+.rtag-sky{background:var(--sky-light);color:var(--sky)}
+.rtag-amber{background:var(--amber-light);color:var(--amber-dark)}
+.qtext{font-size:17px;font-weight:700;line-height:1.55;color:var(--text);margin-bottom:1.25rem}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{padding:13px 18px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--white);color:var(--text);font-size:14px;cursor:pointer;text-align:left;transition:all .18s;font-family:inherit;font-weight:500}
+.opt:hover:not(:disabled){border-color:var(--sky);background:var(--sky-light);transform:translateX(4px)}
+.opt.ok{background:var(--mint-light);border-color:var(--mint);color:var(--mint-dark);font-weight:700}
+.opt.no{background:var(--coral-light);border-color:var(--coral);color:var(--coral-dark)}
+.opt.dim{opacity:.25}
+.expl{margin-top:14px;padding:14px 16px;border-radius:var(--r-sm);font-size:13px;line-height:1.7}
+.expl-ok{background:var(--mint-light);color:var(--mint-dark);border:1px solid #86EFAC}
+.expl-no{background:var(--coral-light);color:var(--coral-dark);border:1px solid #FCA5A5}
+.btn-next{width:100%;margin-top:14px;padding:14px;border-radius:var(--r-sm);border:none;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;color:#fff}
+.btn-next-sky{background:linear-gradient(135deg,var(--sky),#2563EB)}
+.btn-next-amber{background:linear-gradient(135deg,var(--amber),#D97706)}
+.btn-next-sky:hover,.btn-next-amber:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.tf-row{display:flex;gap:10px}
+.tf-btn{flex:1;padding:15px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--white);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;font-family:inherit}
+.tf-btn.yes:hover{background:var(--mint-light);border-color:var(--mint);color:var(--mint-dark);transform:scale(1.03)}
+.tf-btn.no:hover{background:var(--coral-light);border-color:var(--coral);color:var(--coral-dark);transform:scale(1.03)}
+
+/* result */
+.res{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:3rem 2rem;text-align:center;box-shadow:var(--shadow)}
+.res-icon{font-size:64px;margin-bottom:10px}
+.res-h{font-family:'Noto Serif',serif;font-size:24px;font-weight:900;margin-bottom:6px}
+.res-p{font-size:14px;color:var(--text2);margin-bottom:24px}
+.stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.st{background:var(--bg);border-radius:14px;padding:16px 24px;text-align:center;min-width:85px;border:1px solid var(--border)}
+.st .v{font-size:26px;font-weight:800}.st .l{font-size:11px;color:var(--text3);margin-top:3px;font-weight:600}
+.btn-o{padding:11px 28px;border-radius:30px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;border:1.5px solid var(--border);background:var(--white);color:var(--text2);transition:all .2s;margin-top:8px}
+.btn-o:hover{border-color:var(--text);color:var(--text)}
+
+/* ===== TIMELINE SORT ===== */
+.sort-instruction{display:flex;align-items:center;gap:10px;padding:14px 18px;background:var(--amber-light);border-radius:var(--r-sm);margin-bottom:18px;font-size:13px;color:var(--amber-dark);font-weight:600;border:1px solid rgba(245,158,11,.2)}
+.tl-pool{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}
+.tl-item{padding:11px 18px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--white);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+.tl-item:hover:not(.used){border-color:var(--amber);background:var(--amber-light);transform:translateY(-2px);box-shadow:var(--shadow)}
+.tl-item.used{opacity:.25;cursor:default;text-decoration:line-through}
+.tl-slots{display:flex;flex-direction:column;gap:8px}
+.tl-slot{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:var(--r-sm);border:2px dashed var(--border);background:var(--bg);min-height:52px;transition:all .2s}
+.tl-slot.filled{border-style:solid;background:var(--white);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.tl-slot.correct{border-color:var(--mint);background:var(--mint-light)}
+.tl-slot.wrong{border-color:var(--coral);background:var(--coral-light)}
+.tl-order{font-size:13px;font-weight:800;color:var(--text3);min-width:24px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--border)}
+.tl-slot.correct .tl-order{background:var(--mint);color:#fff}
+.tl-slot.wrong .tl-order{background:var(--coral);color:#fff}
+.tl-val{font-size:13px;font-weight:600;color:var(--text)}
+.tl-date{font-size:11px;color:var(--text3);margin-left:auto;font-weight:500}
+
+/* ===== FLIP CARDS ===== */
+.flip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.flip-card{aspect-ratio:.85;border-radius:var(--r-sm);cursor:pointer;perspective:800px;user-select:none}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{position:absolute;inset:0;border-radius:var(--r-sm);backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;font-weight:600;line-height:1.45}
+.flip-front{background:linear-gradient(135deg,var(--violet-light),#EDE9FE);border:2px solid var(--border);color:var(--violet);font-size:24px;transition:all .2s}
+.flip-card:hover:not(.matched):not(.flipped) .flip-front{border-color:var(--violet);box-shadow:var(--shadow);transform:scale(1.03)}
+.flip-back{background:var(--white);border:2px solid var(--violet);color:var(--text);transform:rotateY(180deg);font-size:11.5px}
+.flip-card.matched .flip-front{display:none}
+.flip-card.matched .flip-inner{transform:rotateY(180deg)}
+.flip-card.matched .flip-back{border-color:var(--mint);background:var(--mint-light);color:var(--mint-dark)}
+
+.footer{text-align:center;padding:2.5rem 1rem;font-size:12px;color:var(--text3);border-top:1px solid var(--border);margin-top:2rem}
+.footer a{color:var(--coral);text-decoration:none;font-weight:600}
+
+@media(max-width:640px){.tab{padding:9px 14px;font-size:12px}.flip-grid{grid-template-columns:repeat(3,1fr)}section{padding:1.5rem 1rem}.hero{padding:2.5rem 1.5rem 2rem}.stats-row{gap:8px}.stat-card{padding:12px 16px;min-width:70px}.stat-card .num{font-size:22px}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-pill"><span class="dot"></span> VNR202 · Sản phẩm sáng tạo · FPT University</div>
+  <h1>Cách Mạng <em>Tháng Tám</em> 1945</h1>
+  <p class="hero-sub">Hành trình từ đêm trường nô lệ đến bình minh độc lập — khám phá bước ngoặt vĩ đại nhất lịch sử Việt Nam hiện đại qua 4 trải nghiệm tương tác.</p>
+  <div class="stats-row">
+    <div class="stat-card"><span class="num">3</span><span class="lbl">Chủ đề</span></div>
+    <div class="stat-card"><span class="num">45</span><span class="lbl">Thử thách</span></div>
+    <div class="stat-card"><span class="num">8</span><span class="lbl">Niên biểu</span></div>
+    <div class="stat-card"><span class="num">12</span><span class="lbl">Thẻ nhớ</span></div>
+  </div>
+</div>
+
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <button class="tab active" data-c="coral" onclick="go('know')" id="t-know">📚 Khám phá</button>
+  <button class="tab" data-c="sky" onclick="go('quiz')" id="t-quiz">🎯 Thử thách</button>
+  <button class="tab" data-c="amber" onclick="go('sort')" id="t-sort">⏱️ Niên biểu</button>
+  <button class="tab" data-c="violet" onclick="go('flip')" id="t-flip">🃏 Lật thẻ</button>
+</div>
+
+<!-- KHÁM PHÁ -->
+<section id="s-know" class="active"><div id="accWrap"></div></section>
+
+<!-- THỬ THÁCH -->
+<section id="s-quiz"><div class="game-box" id="quizBox">
+  <div class="launch l-sky"><div class="launch-icon">🎯</div><h2>Thử Thách Tổng Hợp</h2><p>45 câu hỏi chia 3 vòng — kết hợp trắc nghiệm 4 đáp án và đúng/sai xen kẽ. Mỗi câu có giải thích chi tiết giúp bạn hiểu sâu hơn.</p><div class="chips"><span class="chip">3 vòng · 15 câu/vòng</span><span class="chip">Trắc nghiệm + Đúng/Sai</span><span class="chip">Có giải thích</span></div><button class="btn-go btn-sky" onclick="initQuiz()">Bắt đầu thử thách</button></div>
+</div></section>
+
+<!-- NIÊN BIỂU -->
+<section id="s-sort"><div class="game-box" id="sortBox">
+  <div class="launch l-amber"><div class="launch-icon">⏱️</div><h2>Sắp Xếp Niên Biểu</h2><p>8 sự kiện lịch sử quan trọng — click sự kiện xảy ra sớm nhất trước, muộn nhất sau. Bạn nắm vững timeline chưa?</p><div class="chips"><span class="chip">8 sự kiện</span><span class="chip">Xếp đúng thứ tự</span><span class="chip">Kiểm tra trí nhớ</span></div><button class="btn-go btn-amber" onclick="initSort()">Bắt đầu sắp xếp</button></div>
+</div></section>
+
+<!-- LẬT THẺ -->
+<section id="s-flip"><div class="game-box" id="flipBox">
+  <div class="launch l-violet"><div class="launch-icon">🃏</div><h2>Lật Thẻ Ghi Nhớ</h2><p>12 thẻ ẩn chứa 6 cặp sự kiện ↔ mô tả. Lật 2 thẻ mỗi lượt — tìm cặp đúng! Càng ít lượt càng giỏi.</p><div class="chips"><span class="chip">6 cặp · 12 thẻ</span><span class="chip">Rèn trí nhớ</span><span class="chip">Đếm số lượt</span></div><button class="btn-go btn-violet" onclick="initFlip()">Bắt đầu lật thẻ</button></div>
+</div></section>
+
+<div class="footer">VNR202 · Lịch Sử Đảng Cộng Sản Việt Nam · <a href="#">FPT University Hồ Chí Minh</a></div>
+
+<script>
+function go(id){['know','quiz','sort','flip'].forEach(k=>{document.getElementById('s-'+k).classList.remove('active');document.getElementById('t-'+k).classList.remove('active')});document.getElementById('s-'+id).classList.add('active');document.getElementById('t-'+id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function shuffle(a){return[...a].sort(()=>Math.random()-.5)}
+
+/* ===== ACCORDION ===== */
+const ACC=[
+{num:"01",title:"Bối cảnh & Thời cơ",sub:"Tình hình thế giới, trong nước và quá trình chuẩn bị lực lượng",body:`<div class="kb">
+
+<div class="kb-box sky"><h4>🌍 Tình hình thế giới (1939–1945)</h4>
+<ul>
+<li>Chiến tranh thế giới thứ hai bùng nổ (9/1939), phát xít Đức tấn công khắp châu Âu.</li>
+<li><em>5/1945</em> — Phát xít Đức đầu hàng Đồng minh vô điều kiện. Chiến tranh ở châu Âu kết thúc.</li>
+<li><em>8/8/1945</em> — Liên Xô tuyên chiến với Nhật Bản, tấn công đạo quân Quan Đông tại Mãn Châu.</li>
+<li><em>6/8/1945</em> — Mỹ ném bom nguyên tử xuống <strong>Hiroshima</strong>; <em>9/8</em> — tiếp tục ném bom <strong>Nagasaki</strong>. Thiệt hại thảm khốc.</li>
+<li><em>15/8/1945</em> — Nhật hoàng <strong>tuyên bố đầu hàng vô điều kiện</strong> → tạo ra thời cơ <em>"ngàn năm có một"</em> cho cách mạng Việt Nam.</li>
+</ul></div>
+
+<div class="kb-box"><h4>🇻🇳 Tình hình trong nước</h4>
+<ul>
+<li><em>9/1940</em> — Nhật Bản xâm lược Đông Dương, câu kết với thực dân Pháp, nhân dân ta chịu cảnh "một cổ hai tròng".</li>
+<li><em>9/3/1945</em> — <strong>Nhật đảo chính lật đổ Pháp</strong> trên toàn Đông Dương. Nhật độc chiếm Đông Dương, dựng lên <strong>Chính phủ bù nhìn Trần Trọng Kim</strong> (tồn tại ~4 tháng: 17/4–25/8/1945).</li>
+<li>Ngay đêm 9/3/1945, <strong>Ban Thường vụ Trung ương Đảng</strong> họp khẩn cấp, ra chỉ thị lịch sử: <strong>"Nhật–Pháp bắn nhau và hành động của chúng ta"</strong> — xác định kẻ thù chính là phát xít Nhật, phát động cao trào <strong>kháng Nhật cứu nước</strong>.</li>
+<li><strong>Nạn đói cuối 1944–đầu 1945</strong>: do Nhật và Pháp vơ vét lúa gạo, hơn <strong>2 triệu người</strong> dân miền Bắc chết đói — thổi bùng ngọn lửa căm thù và ý chí đấu tranh trong nhân dân.</li>
+<li>Phong trào <strong>phá kho thóc Nhật cứu đói</strong> (từ 3/1945) do Đảng lãnh đạo, kết hợp nhiệm vụ kinh tế với nhiệm vụ chính trị, thu hút hàng triệu quần chúng.</li>
+</ul></div>
+
+<div class="kb-box sky"><h4>⚙️ Quá trình chuẩn bị lực lượng (1930–1945)</h4>
+<ul>
+<li><em>3/2/1930</em> — Đảng Cộng sản Việt Nam thành lập, mở ra thời kỳ mới cho cách mạng Việt Nam.</li>
+<li><em>1930–1931</em> — Phong trào <strong>Xô Viết Nghệ Tĩnh</strong> — cuộc tổng diễn tập đầu tiên của cách mạng, tích lũy kinh nghiệm quý báu về khởi nghĩa vũ trang và xây dựng chính quyền.</li>
+<li><em>1936–1939</em> — <strong>Phong trào Dân chủ Đông Dương</strong>: Đảng đấu tranh công khai, hợp pháp trong Mặt trận Dân chủ Đông Dương, tập hợp quần chúng rộng rãi, tích lũy kinh nghiệm tổ chức và vận động quần chúng.</li>
+<li><em>1940</em> — <strong>Khởi nghĩa Bắc Sơn (27/9/1940)</strong> tại Lạng Sơn — cuộc khởi nghĩa vũ trang đầu tiên do Đảng trực tiếp lãnh đạo. <strong>Khởi nghĩa Nam Kỳ (23/11/1940)</strong> — lần đầu tiên <strong>cờ đỏ sao vàng</strong> xuất hiện. Tuy thất bại nhưng để lại bài học quý về xây dựng lực lượng vũ trang và thời điểm khởi nghĩa.</li>
+</ul></div>
+
+<div class="kb-box mint"><h4>🏠 Hội nghị Trung ương VIII (5/1941) — Bước ngoặt chiến lược</h4>
+<ul>
+<li><em>28/1/1941</em> — <strong>Nguyễn Ái Quốc về nước</strong> sau 30 năm bôn ba hải ngoại (1911–1941), đặt chân lên mảnh đất Pác Bó, Cao Bằng, trực tiếp lãnh đạo cách mạng trong nước.</li>
+<li><em>5/1941</em> — Nguyễn Ái Quốc chủ trì <strong>Hội nghị Trung ương VIII</strong> tại Pác Bó (Cao Bằng), đưa ra hai quyết định chiến lược quan trọng:
+  <ul>
+    <li>Đặt nhiệm vụ <strong>giải phóng dân tộc lên hàng đầu</strong>, tạm gác khẩu hiệu cách mạng ruộng đất.</li>
+    <li>Thành lập <strong>Mặt trận Việt Nam Độc lập Đồng minh (Mặt trận Việt Minh)</strong> — ngày <em>19/5/1941</em> — tập hợp mọi tầng lớp nhân dân yêu nước không phân biệt giai cấp.</li>
+  </ul>
+</li>
+</ul></div>
+
+<div class="kb-box amber"><h4>🎖️ Xây dựng lực lượng vũ trang & căn cứ địa</h4>
+<ul>
+<li><em>22/12/1944</em> — Nguyễn Ái Quốc ra lệnh thành lập <strong>Đội Việt Nam Tuyên truyền Giải phóng quân</strong> gồm <strong>34 chiến sĩ</strong>, do <strong>Võ Nguyên Giáp</strong> chỉ huy — tiền thân của Quân đội Nhân dân Việt Nam. Đội giành thắng lợi ngay trong hai trận đầu: <strong>Phai Khắt và Nà Ngần</strong> (25–26/12/1944).</li>
+<li><em>6/1945</em> — Thành lập <strong>Khu Giải phóng Việt Bắc</strong> gồm <strong>6 tỉnh</strong>: Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang, Thái Nguyên — căn cứ địa vững chắc, hậu phương của cách mạng.</li>
+<li><em>16–17/8/1945</em> — <strong>Đại hội Tân Trào</strong> — Đại hội đại biểu quốc dân thông qua lệnh Tổng khởi nghĩa, bầu ra <strong>Ủy ban Dân tộc Giải phóng</strong> do <strong>Hồ Chí Minh</strong> đứng đầu — chính phủ lâm thời của nước Việt Nam mới.</li>
+</ul></div>
+
+</div>`},
+
+{num:"02",title:"Diễn biến Tổng khởi nghĩa",sub:"15 ngày lịch sử: 13/8 – 28/8/1945",body:`<div class="kb">
+
+<div class="kb-box amber"><h4>📢 Thời cơ xuất hiện & lệnh Tổng khởi nghĩa</h4>
+<ul>
+<li><em>15/8/1945</em> — Nhật hoàng tuyên bố đầu hàng. Toàn bộ hệ thống cai trị của Nhật tại Đông Dương tê liệt. Đây chính là <strong>thời cơ ngàn năm có một</strong> mà Đảng đã dự báo và chuẩn bị.</li>
+<li><em>13/8/1945</em> — <strong>Ủy ban Khởi nghĩa Toàn quốc</strong> ra <strong>Quân lệnh số 1</strong> — chính thức hạ lệnh: <em>"Giờ Tổng khởi nghĩa đã đến!"</em> — phát lệnh nổi dậy trên toàn quốc.</li>
+<li><em>13–15/8/1945</em> — <strong>Hội nghị toàn quốc của Đảng</strong> họp tại Tân Trào (Tuyên Quang), thông qua kế hoạch lãnh đạo toàn dân Tổng khởi nghĩa, nhấn mạnh phải <strong>hành động nhanh, gọn, kịp thời</strong> trước khi quân Đồng minh vào Đông Dương.</li>
+</ul></div>
+
+<div class="kb-box"><h4>🗓️ Làn sóng khởi nghĩa lan rộng (14–18/8/1945)</h4>
+<ul>
+<li><em>14/8</em> — Các tỉnh <strong>Quảng Ngãi, Hà Tĩnh, Nghệ An</strong> giành chính quyền — những tỉnh đầu tiên nổi dậy thành công.</li>
+<li><em>16/8</em> — <strong>Thái Nguyên, Bắc Giang, Hải Dương</strong> giành chính quyền. Khởi nghĩa lan rộng ra nhiều tỉnh miền núi và đồng bằng.</li>
+<li><em>17/8</em> — <strong>Hà Đông</strong> và hàng loạt tỉnh miền Trung nổi dậy. Chính quyền bù nhìn ở nhiều nơi tan rã không kháng cự.</li>
+<li><em>18/8</em> — Các tỉnh <strong>Bắc Ninh, Hải Phòng, Hà Nam, Vĩnh Yên</strong> và nhiều tỉnh khác giành chính quyền.</li>
+</ul></div>
+
+<div class="kb-box"><h4>🏛️ 19/8/1945 — Hà Nội giành chính quyền</h4>
+<ul>
+<li>Hàng chục vạn nhân dân Hà Nội và các tỉnh lân cận xuống đường biểu tình vũ trang, khí thế sục sôi.</li>
+<li>Lực lượng cách mạng chiếm <strong>Phủ Khâm sai, Trại Bảo an binh, Sở Cảnh sát</strong> — các cơ quan đầu não của chính quyền thực dân.</li>
+<li>Khâm sai <strong>Phan Kế Toại</strong> giao nộp chính quyền. Cuộc khởi nghĩa ở Hà Nội thắng lợi nhanh chóng, hầu như không có đổ máu.</li>
+<li><strong>19/8 được lấy làm ngày kỷ niệm Cách mạng tháng Tám</strong> — ngày thủ đô giành lại tự do.</li>
+</ul></div>
+
+<div class="kb-box"><h4>👑 23/8 & 25/8 — Huế và Sài Gòn</h4>
+<ul>
+<li><em>23/8/1945</em> — <strong>Huế giành chính quyền</strong>. Vua <strong>Bảo Đại</strong> — vị vua cuối cùng của triều Nguyễn — tuyên bố <strong>thoái vị</strong> tại Ngọ Môn, trao ấn kiếm cho đại diện chính phủ lâm thời, trở thành <strong>"Công dân Vĩnh Thụy"</strong>. Chế độ phong kiến hàng ngàn năm chính thức sụp đổ.</li>
+<li><em>25/8/1945</em> — <strong>Sài Gòn giành chính quyền</strong> trong khí thế hào hùng với hơn <strong>1 triệu nhân dân</strong> xuống đường. Nam Bộ hoàn toàn về tay cách mạng.</li>
+<li><em>28/8/1945</em> — Tỉnh <strong>Đồng Nai Thượng</strong> (nay là Lâm Đồng) là nơi cuối cùng giành chính quyền. Cuộc Tổng khởi nghĩa thành công trên phạm vi cả nước chỉ trong <strong>15 ngày</strong> (13–28/8/1945).</li>
+</ul></div>
+
+<div class="kb-box sky"><h4>🇻🇳 2/9/1945 — Tuyên ngôn Độc lập</h4>
+<ul>
+<li>Ngày <em>2/9/1945</em>, tại <strong>Quảng trường Ba Đình</strong> (Hà Nội), trước hàng chục vạn đồng bào, Chủ tịch <strong>Hồ Chí Minh</strong> đọc bản <strong>Tuyên ngôn Độc lập</strong> — khai sinh nước <strong>Việt Nam Dân chủ Cộng hòa</strong>.</li>
+<li>Tuyên ngôn mở đầu bằng việc trích dẫn <strong>Tuyên ngôn Độc lập Hoa Kỳ (1776)</strong> và <strong>Tuyên ngôn Nhân quyền và Dân quyền của Pháp (1789)</strong> — khẳng định quyền tự do, độc lập là lẽ phải hiển nhiên của mọi dân tộc.</li>
+<li>Việt Nam Dân chủ Cộng hòa trở thành <strong>nhà nước Dân chủ Nhân dân đầu tiên ở Đông Nam Á</strong>.</li>
+</ul></div>
+
+</div>`},
+
+{num:"03",title:"Ý nghĩa lịch sử",sub:"Ý nghĩa trong nước, quốc tế và bài học kinh nghiệm",body:`<div class="kb">
+
+<div class="kb-box sky"><h4>🏆 Ý nghĩa đối với dân tộc Việt Nam</h4>
+<ul>
+<li><strong>Phá tan xiềng xích nô lệ</strong> của thực dân Pháp gần 100 năm (1858–1945) và ách thống trị của phát xít Nhật (1940–1945).</li>
+<li><strong>Lật đổ chế độ quân chủ phong kiến</strong> tồn tại hàng nghìn năm ở Việt Nam, chấm dứt hoàn toàn với sự kiện Bảo Đại thoái vị (23/8/1945).</li>
+<li><strong>Nhân dân lao động lần đầu tiên trong lịch sử nắm chính quyền</strong> — từ thân phận nô lệ trở thành chủ nhân của đất nước.</li>
+<li>Khai sinh ra <strong>nước Việt Nam Dân chủ Cộng hòa</strong> — nhà nước công nông đầu tiên ở Đông Nam Á, mở ra kỷ nguyên mới: kỷ nguyên <strong>độc lập dân tộc gắn liền với chủ nghĩa xã hội</strong>.</li>
+<li>Đảng Cộng sản Việt Nam từ một đảng hoạt động bí mật trở thành <strong>đảng cầm quyền</strong>, lãnh đạo toàn thể dân tộc.</li>
+</ul></div>
+
+<div class="kb-box mint"><h4>🌏 Ý nghĩa quốc tế</h4>
+<ul>
+<li>Là <strong>thắng lợi đầu tiên của một dân tộc thuộc địa nhỏ bé</strong> đánh bại ách thống trị của chủ nghĩa thực dân và chủ nghĩa phát xít trong thế kỷ XX.</li>
+<li>Góp phần <strong>cổ vũ mạnh mẽ phong trào đấu tranh giải phóng dân tộc</strong> trên toàn thế giới, đặc biệt là các nước thuộc địa và phụ thuộc ở châu Á, châu Phi và Mỹ Latinh.</li>
+<li>Chứng minh rằng <strong>một dân tộc dù nhỏ bé, nếu có đường lối cách mạng đúng đắn và tinh thần đoàn kết</strong>, hoàn toàn có thể đánh bại các thế lực đế quốc, thực dân hùng mạnh.</li>
+<li>Mở ra <strong>thời đại sụp đổ của chủ nghĩa thực dân cũ</strong>, tạo tiền đề cho làn sóng giải phóng dân tộc ở nhiều quốc gia trong những thập kỷ tiếp theo.</li>
+</ul></div>
+
+<div class="kb-box"><h4>⚠️ Thách thức sau Cách mạng tháng Tám — "Ba loại giặc"</h4>
+<ul>
+<li>Ngay sau khi giành được độc lập, Chủ tịch Hồ Chí Minh xác định ba nguy cơ lớn đe dọa chính quyền non trẻ:
+  <ul>
+    <li><strong>Giặc đói</strong> — hậu quả nặng nề của nạn đói 1945, hàng triệu người còn thiếu ăn.</li>
+    <li><strong>Giặc dốt</strong> — hơn 90% dân số mù chữ sau gần 100 năm thực dân cố tình kìm hãm dân trí.</li>
+    <li><strong>Giặc ngoại xâm</strong> — quân Tưởng Giới Thạch ở miền Bắc, quân Anh ở miền Nam, thực dân Pháp quay lại xâm lược.</li>
+  </ul>
+</li>
+</ul></div>
+
+<div class="kb-box amber"><h4>📚 Năm bài học kinh nghiệm lịch sử</h4>
+<ul>
+<li><strong>① Chớp thời cơ cách mạng</strong> — Đảng nhận định chính xác thời cơ "ngàn năm có một" khi Nhật đầu hàng và hành động kịp thời, kiên quyết trước khi quân Đồng minh vào Đông Dương.</li>
+<li><strong>② Chuẩn bị lực lượng lâu dài</strong> — Đảng kiên trì xây dựng lực lượng chính trị và vũ trang suốt 15 năm (1930–1945): từ Xô Viết Nghệ Tĩnh, Mặt trận Việt Minh đến Việt Nam Tuyên truyền Giải phóng quân.</li>
+<li><strong>③ Đại đoàn kết toàn dân tộc</strong> — Mặt trận Việt Minh đã tập hợp được mọi tầng lớp nhân dân, mọi giai cấp, dân tộc và tôn giáo dưới ngọn cờ giải phóng dân tộc.</li>
+<li><strong>④ Phương pháp cách mạng sáng tạo</strong> — Kết hợp đấu tranh chính trị với đấu tranh vũ trang; tiến hành khởi nghĩa từng phần tiến lên Tổng khởi nghĩa; kết hợp lực lượng nông thôn với thành thị.</li>
+<li><strong>⑤ Sự lãnh đạo tuyệt đối của Đảng</strong> — Đảng Cộng sản Việt Nam với đường lối đúng đắn, sự quyết đoán và linh hoạt trong chỉ đạo là nhân tố quyết định thắng lợi của Cách mạng tháng Tám.</li>
+</ul></div>
+
+</div>`}
+];
+(function(){const w=document.getElementById('accWrap');ACC.forEach((a,i)=>{w.innerHTML+=`<div class="acc-group"><div class="acc-header${i===0?' open':''}" onclick="toggleAcc(this)"><div class="acc-num">${a.num}</div><div class="acc-title"><h3>${a.title}</h3><p>${a.sub}</p></div><div class="acc-arrow">▼</div></div><div class="acc-body${i===0?' show':''}">${a.body}</div></div>`})})();
+function toggleAcc(el){const b=el.nextElementSibling,o=el.classList.contains('open');document.querySelectorAll('.acc-header').forEach(h=>{h.classList.remove('open');h.nextElementSibling.classList.remove('show')});if(!o){el.classList.add('open');b.classList.add('show')}}
+
+/* ===== QUIZ ===== */
+const MC=[
+/* ===== VÒNG 1: BỐI CẢNH & THỜI CƠ ===== */
+{t:"mc",q:"Nhật Bản xâm lược Đông Dương vào tháng năm nào?",o:["7/1939","9/1940","3/1941","12/1941"],a:"9/1940",e:"Tháng 9/1940, Nhật vào Đông Dương, câu kết với Pháp, nhân dân ta chịu cảnh một cổ hai tròng."},
+{t:"mc",q:"Đêm 9/3/1945 xảy ra sự kiện lịch sử gì?",o:["Pháp đảo chính Nhật","Nhật đảo chính Pháp","Việt Minh nổi dậy","Mỹ ném bom Hà Nội"],a:"Nhật đảo chính Pháp",e:"Nhật lật đổ Pháp trên toàn Đông Dương, độc chiếm Đông Dương. Ngay đêm đó, Ban Thường vụ Trung ương Đảng họp khẩn và ra chỉ thị 'Nhật–Pháp bắn nhau và hành động của chúng ta'."},
+{t:"tf",q:"Sau khi đảo chính Pháp, Nhật Bản dựng lên Chính phủ bù nhìn do Trần Trọng Kim đứng đầu.",a:true,e:"Đúng — Chính phủ Trần Trọng Kim tồn tại từ 17/4 đến 25/8/1945, khoảng 4 tháng."},
+{t:"mc",q:"Nạn đói cuối 1944–đầu 1945 cướp đi sinh mạng bao nhiêu người dân miền Bắc?",o:["Hơn 500.000","Hơn 1 triệu","Hơn 2 triệu","Hơn 3 triệu"],a:"Hơn 2 triệu",e:"Hơn 2 triệu người dân miền Bắc chết đói do Nhật–Pháp vơ vét lúa gạo, thổi bùng ngọn lửa căm thù trong nhân dân."},
+{t:"mc",q:"Sau sự kiện 9/3/1945, Đảng phát động cao trào nào?",o:["Chống Pháp cứu nước","Kháng Nhật cứu nước","Phá kho thóc cứu đói","Tổng khởi nghĩa"],a:"Kháng Nhật cứu nước",e:"Chỉ thị 'Nhật–Pháp bắn nhau' xác định kẻ thù chính là phát xít Nhật và phát động cao trào kháng Nhật cứu nước — tiền đề trực tiếp dẫn đến Tổng khởi nghĩa."},
+{t:"tf",q:"Phong trào phá kho thóc Nhật cứu đói bắt đầu từ tháng 3/1945 do Đảng lãnh đạo.",a:true,e:"Đúng — phong trào kết hợp nhiệm vụ kinh tế với chính trị, thu hút hàng triệu quần chúng tham gia cách mạng."},
+{t:"mc",q:"Nguyễn Ái Quốc về nước ngày 28/1/1941 sau bao nhiêu năm hoạt động ở nước ngoài?",o:["20 năm","25 năm","30 năm","35 năm"],a:"30 năm",e:"Nguyễn Ái Quốc rời Việt Nam năm 1911, trở về năm 1941 — đúng 30 năm bôn ba hải ngoại, về Pác Bó (Cao Bằng) trực tiếp lãnh đạo cách mạng."},
+{t:"mc",q:"Hội nghị Trung ương VIII (5/1941) do ai chủ trì và họp ở đâu?",o:["Trường Chinh tại Hà Nội","Nguyễn Ái Quốc tại Pác Bó","Lê Duẩn tại Huế","Võ Nguyên Giáp tại Tân Trào"],a:"Nguyễn Ái Quốc tại Pác Bó",e:"Nguyễn Ái Quốc chủ trì tại Pác Bó, Cao Bằng. Đây là hội nghị quyết định đặt nhiệm vụ giải phóng dân tộc lên hàng đầu và thành lập Mặt trận Việt Minh."},
+{t:"tf",q:"Hội nghị Trung ương VIII quyết định đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, tạm gác khẩu hiệu cách mạng ruộng đất.",a:true,e:"Đúng — đây là quyết định chiến lược, tập hợp mọi tầng lớp nhân dân yêu nước dưới ngọn cờ giải phóng dân tộc."},
+{t:"mc",q:"Mặt trận Việt Nam Độc lập Đồng minh (Mặt trận Việt Minh) được thành lập ngày nào?",o:["3/2/1930","28/1/1941","19/5/1941","22/12/1944"],a:"19/5/1941",e:"Mặt trận Việt Minh thành lập ngày 19/5/1941 tại Pác Bó (Cao Bằng), tập hợp mọi tầng lớp nhân dân yêu nước không phân biệt giai cấp."},
+{t:"mc",q:"Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập ngày nào, gồm bao nhiêu chiến sĩ?",o:["19/5/1941, 100 chiến sĩ","22/12/1944, 34 chiến sĩ","19/8/1945, 50 chiến sĩ","2/9/1945, 200 chiến sĩ"],a:"22/12/1944, 34 chiến sĩ",e:"Ngày 22/12/1944, Đội Việt Nam Tuyên truyền Giải phóng quân thành lập gồm 34 chiến sĩ, do Võ Nguyên Giáp chỉ huy — tiền thân của Quân đội Nhân dân Việt Nam."},
+{t:"tf",q:"Hai trận đầu tiên của Đội Việt Nam Tuyên truyền Giải phóng quân là Phai Khắt và Nà Ngần (25–26/12/1944).",a:true,e:"Đúng — đội giành thắng lợi ngay trong hai trận đầu, khẳng định sức mạnh của lực lượng vũ trang cách mạng."},
+{t:"mc",q:"Khu Giải phóng Việt Bắc được thành lập tháng 6/1945, gồm bao nhiêu tỉnh?",o:["4 tỉnh","5 tỉnh","6 tỉnh","8 tỉnh"],a:"6 tỉnh",e:"Khu Giải phóng Việt Bắc gồm 6 tỉnh: Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang, Thái Nguyên — căn cứ địa vững chắc của cách mạng."},
+{t:"mc",q:"Đại hội Tân Trào (16–17/8/1945) bầu ra Ủy ban Dân tộc Giải phóng do ai đứng đầu?",o:["Trường Chinh","Võ Nguyên Giáp","Hồ Chí Minh","Phạm Văn Đồng"],a:"Hồ Chí Minh",e:"Đại hội Tân Trào thông qua lệnh Tổng khởi nghĩa và bầu Ủy ban Dân tộc Giải phóng do Hồ Chí Minh đứng đầu — chính phủ lâm thời của nước Việt Nam mới."},
+{t:"mc",q:"Mỹ ném bom nguyên tử xuống Hiroshima ngày nào?",o:["6/8/1945","9/8/1945","15/8/1945","2/9/1945"],a:"6/8/1945",e:"6/8/1945: Hiroshima; 9/8/1945: Nagasaki. Hai vụ ném bom nguyên tử buộc Nhật hoàng phải tuyên bố đầu hàng vào 15/8/1945."},
+{t:"tf",q:"Ngày 15/8/1945, Nhật hoàng tuyên bố đầu hàng vô điều kiện, tạo ra thời cơ 'ngàn năm có một' cho cách mạng Việt Nam.",a:true,e:"Đúng — bộ máy cai trị của Nhật ở Đông Dương tê liệt, tạo ra khoảng trống quyền lực mà Đảng đã chuẩn bị 15 năm để tận dụng."},
+
+/* ===== VÒNG 2: DIỄN BIẾN TỔNG KHỞI NGHĨA ===== */
+{t:"mc",q:"Ủy ban Khởi nghĩa Toàn quốc ra Quân lệnh số 1 vào ngày nào?",o:["12/8/1945","13/8/1945","14/8/1945","15/8/1945"],a:"13/8/1945",e:"Ngày 13/8/1945, Ủy ban Khởi nghĩa Toàn quốc ra Quân lệnh số 1 với lời hiệu triệu: 'Giờ Tổng khởi nghĩa đã đến!' — phát lệnh nổi dậy trên toàn quốc."},
+{t:"tf",q:"Hội nghị toàn quốc của Đảng (13–15/8/1945) tại Tân Trào nhấn mạnh phải hành động nhanh, gọn trước khi quân Đồng minh vào Đông Dương.",a:true,e:"Đúng — Đảng nhận thức rõ thời cơ rất ngắn, nếu để quân Đồng minh vào sẽ mất cơ hội giành độc lập thực sự."},
+{t:"mc",q:"Những tỉnh đầu tiên giành chính quyền thành công vào ngày 14/8/1945 là những tỉnh nào?",o:["Hà Nội, Huế, Sài Gòn","Quảng Ngãi, Hà Tĩnh, Nghệ An","Thái Nguyên, Bắc Giang, Hải Dương","Bắc Ninh, Hải Phòng, Hà Nam"],a:"Quảng Ngãi, Hà Tĩnh, Nghệ An",e:"Ngày 14/8/1945, Quảng Ngãi, Hà Tĩnh, Nghệ An là những tỉnh đầu tiên giành chính quyền — mở đầu cho làn sóng khởi nghĩa lan rộng toàn quốc."},
+{t:"mc",q:"Ngày 19/8/1945, lực lượng cách mạng tại Hà Nội chiếm những cơ quan nào?",o:["Nhà hát Lớn, Bưu điện","Phủ Khâm sai, Trại Bảo an binh, Sở Cảnh sát","Dinh Toàn quyền, Ngân hàng","Ga Hà Nội, Sân bay Gia Lâm"],a:"Phủ Khâm sai, Trại Bảo an binh, Sở Cảnh sát",e:"Ba cơ quan đầu não của chính quyền thực dân bị chiếm — Khâm sai Phan Kế Toại giao nộp chính quyền. Hà Nội giành thắng lợi nhanh chóng, hầu như không có đổ máu."},
+{t:"tf",q:"Ngày 19/8/1945 được lấy làm ngày kỷ niệm Cách mạng tháng Tám vì đây là ngày Hà Nội giành chính quyền.",a:true,e:"Đúng — 19/8 là ngày thủ đô giành lại tự do, là mốc biểu tượng quan trọng nhất của cuộc Tổng khởi nghĩa."},
+{t:"mc",q:"Vua Bảo Đại thoái vị vào ngày nào và ở đâu?",o:["19/8/1945 tại Hà Nội","23/8/1945 tại Ngọ Môn, Huế","25/8/1945 tại Sài Gòn","2/9/1945 tại Hà Nội"],a:"23/8/1945 tại Ngọ Môn, Huế",e:"Ngày 23/8/1945, Bảo Đại — vị vua cuối cùng của triều Nguyễn — tuyên bố thoái vị tại Ngọ Môn (Huế), trao ấn kiếm cho đại diện chính phủ lâm thời, trở thành 'Công dân Vĩnh Thụy'. Chế độ phong kiến hàng ngàn năm chính thức sụp đổ."},
+{t:"mc",q:"Sài Gòn giành chính quyền vào ngày nào với bao nhiêu người xuống đường?",o:["19/8, 500.000 người","23/8, 800.000 người","25/8, hơn 1 triệu người","28/8, 2 triệu người"],a:"25/8, hơn 1 triệu người",e:"Ngày 25/8/1945, hơn 1 triệu nhân dân Sài Gòn xuống đường trong khí thế hào hùng, Nam Bộ hoàn toàn về tay cách mạng."},
+{t:"tf",q:"Cuộc Tổng khởi nghĩa tháng Tám thành công trên phạm vi cả nước chỉ trong 15 ngày (13–28/8/1945).",a:true,e:"Đúng — đây là tốc độ thần kỳ, thể hiện sức mạnh của quần chúng được tổ chức tốt và sự lãnh đạo sáng suốt của Đảng."},
+{t:"mc",q:"Tỉnh cuối cùng giành chính quyền trong Tổng khởi nghĩa là tỉnh nào?",o:["Cà Mau","Hà Tiên","Đồng Nai Thượng (nay là Lâm Đồng)","Kon Tum"],a:"Đồng Nai Thượng (nay là Lâm Đồng)",e:"Ngày 28/8/1945, tỉnh Đồng Nai Thượng (nay là tỉnh Lâm Đồng) là nơi cuối cùng giành chính quyền, hoàn thành cuộc Tổng khởi nghĩa trên toàn quốc."},
+{t:"mc",q:"Bản Tuyên ngôn Độc lập được đọc vào ngày nào và ở đâu?",o:["19/8/1945 tại Nhà hát Lớn","23/8/1945 tại Ngọ Môn Huế","2/9/1945 tại Quảng trường Ba Đình","28/8/1945 tại Phủ Chủ tịch"],a:"2/9/1945 tại Quảng trường Ba Đình",e:"Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập tại Quảng trường Ba Đình (Hà Nội) trước hàng chục vạn đồng bào."},
+{t:"mc",q:"Tuyên ngôn Độc lập mở đầu bằng cách trích dẫn văn kiện nào?",o:["Tuyên ngôn Nhân quyền Pháp 1789","Tuyên ngôn Độc lập Hoa Kỳ 1776","Hiến chương Liên Hợp Quốc","Tuyên ngôn Cộng sản"],a:"Tuyên ngôn Độc lập Hoa Kỳ 1776",e:"Tuyên ngôn Độc lập mở đầu bằng cách trích dẫn Tuyên ngôn Độc lập Hoa Kỳ (1776), tiếp theo là Tuyên ngôn Nhân quyền và Dân quyền của Pháp (1789) — khẳng định quyền tự do là lẽ phải hiển nhiên của mọi dân tộc."},
+{t:"tf",q:"Nước Việt Nam Dân chủ Cộng hòa là nhà nước Dân chủ Nhân dân đầu tiên ở Đông Nam Á.",a:true,e:"Đúng — đây là một trong những ý nghĩa quốc tế quan trọng của Cách mạng tháng Tám năm 1945."},
+{t:"mc",q:"Khâm sai Bắc Kỳ là ai đã giao nộp chính quyền tại Hà Nội ngày 19/8/1945?",o:["Trần Trọng Kim","Bảo Đại","Phan Kế Toại","Nguyễn Văn Xuân"],a:"Phan Kế Toại",e:"Khâm sai Phan Kế Toại giao nộp chính quyền cho lực lượng cách mạng tại Phủ Khâm sai Bắc Kỳ ngày 19/8/1945."},
+{t:"mc",q:"Thứ tự đúng của ba thành phố lớn giành chính quyền trong Tổng khởi nghĩa là gì?",o:["Sài Gòn → Hà Nội → Huế","Huế → Hà Nội → Sài Gòn","Hà Nội → Huế → Sài Gòn","Hà Nội → Sài Gòn → Huế"],a:"Hà Nội → Huế → Sài Gòn",e:"Hà Nội 19/8 → Huế 23/8 → Sài Gòn 25/8. Hà Nội giành chính quyền đầu tiên, Sài Gòn cuối cùng trong số ba thành phố lớn."},
+{t:"tf",q:"Bảo Đại sau khi thoái vị trở thành 'Công dân Vĩnh Thụy', đánh dấu sự chấm dứt hoàn toàn của chế độ phong kiến Việt Nam.",a:true,e:"Đúng — chế độ quân chủ phong kiến tồn tại hàng nghìn năm chính thức sụp đổ vào ngày 23/8/1945."},
+{t:"mc",q:"Phương châm lãnh đạo khởi nghĩa của Đảng trong Cách mạng tháng Tám là gì?",o:["Đánh du kích lâu dài","Dựa vào lực lượng nước ngoài","Khởi nghĩa từng phần tiến lên Tổng khởi nghĩa","Đàm phán với Nhật để giành độc lập"],a:"Khởi nghĩa từng phần tiến lên Tổng khởi nghĩa",e:"Đảng chủ trương khởi nghĩa từng phần ở nông thôn, tiến lên giành chính quyền ở các thành phố bằng Tổng khởi nghĩa — kết hợp lực lượng chính trị với lực lượng vũ trang."},
+
+/* ===== VÒNG 3: Ý NGHĨA LỊCH SỬ ===== */
+{t:"mc",q:"Cách mạng tháng Tám 1945 đã lật đổ ba thế lực nào?",o:["Pháp, Anh, phong kiến","Nhật, Mỹ, phong kiến","Pháp, Nhật, phong kiến","Nhật, Trung, phong kiến"],a:"Pháp, Nhật, phong kiến",e:"Cách mạng tháng Tám lật đổ ách thống trị của thực dân Pháp (gần 100 năm), phát xít Nhật (1940–1945) và chế độ quân chủ phong kiến hàng nghìn năm."},
+{t:"tf",q:"Cách mạng tháng Tám là cuộc cách mạng giải phóng dân tộc dân chủ nhân dân.",a:true,e:"Đúng — đây là tính chất của Cách mạng tháng Tám: vừa giải phóng dân tộc (chống đế quốc), vừa dân chủ nhân dân (lật đổ phong kiến, nhân dân làm chủ)."},
+{t:"mc",q:"Sau Cách mạng tháng Tám, Chủ tịch Hồ Chí Minh xác định có bao nhiêu loại 'giặc' cần phải đánh?",o:["2 loại","3 loại","4 loại","5 loại"],a:"3 loại",e:"Ba loại giặc: Giặc đói (nạn đói), Giặc dốt (hơn 90% dân số mù chữ), Giặc ngoại xâm (quân Tưởng Giới Thạch, quân Anh, thực dân Pháp)."},
+{t:"mc",q:"Ý nghĩa nào sau đây KHÔNG phải là ý nghĩa của Cách mạng tháng Tám năm 1945?",o:["Lật đổ chế độ phong kiến","Nhân dân lao động lần đầu nắm chính quyền","Kết thúc hoàn toàn chiến tranh tại Đông Dương","Khai sinh nước Việt Nam Dân chủ Cộng hòa"],a:"Kết thúc hoàn toàn chiến tranh tại Đông Dương",e:"Cách mạng tháng Tám không kết thúc chiến tranh — ngay sau đó Pháp quay lại xâm lược, mở đầu cuộc kháng chiến 9 năm (1945–1954)."},
+{t:"tf",q:"Cách mạng tháng Tám 1945 mở ra kỷ nguyên độc lập dân tộc gắn liền với chủ nghĩa xã hội ở Việt Nam.",a:true,e:"Đúng — đây là ý nghĩa sâu sắc của Cách mạng tháng Tám: không chỉ giành độc lập mà còn mở ra con đường đi lên chủ nghĩa xã hội."},
+{t:"mc",q:"Cách mạng tháng Tám có ý nghĩa quốc tế nào nổi bật nhất?",o:["Làm suy yếu Mỹ","Cổ vũ phong trào giải phóng dân tộc trên thế giới","Buộc Pháp rút khỏi châu Á","Làm tan rã phe Đồng minh"],a:"Cổ vũ phong trào giải phóng dân tộc trên thế giới",e:"Cách mạng tháng Tám chứng minh một dân tộc nhỏ bé có thể đánh bại đế quốc, thực dân — cổ vũ mạnh mẽ phong trào đấu tranh giải phóng dân tộc ở châu Á, châu Phi và Mỹ Latinh."},
+{t:"mc",q:"Bài học 'chớp thời cơ' trong Cách mạng tháng Tám thể hiện điều gì?",o:["Chờ quân Đồng minh giúp đỡ","Hành động kịp thời khi Nhật đầu hàng trước khi quân Đồng minh vào","Đàm phán với Pháp để giành độc lập","Tập trung đánh Pháp trước, Nhật sau"],a:"Hành động kịp thời khi Nhật đầu hàng trước khi quân Đồng minh vào",e:"Đảng nhận định chính xác khoảng thời gian từ khi Nhật đầu hàng đến khi quân Đồng minh vào Đông Dương là thời cơ vàng — phải hành động ngay, không được chần chừ."},
+{t:"tf",q:"Bài học 'chuẩn bị lực lượng lâu dài' của Cách mạng tháng Tám thể hiện qua 15 năm xây dựng từ 1930 đến 1945.",a:true,e:"Đúng — từ khi Đảng thành lập (1930) đến Cách mạng tháng Tám (1945) là đúng 15 năm chuẩn bị lực lượng chính trị và vũ trang."},
+{t:"mc",q:"Bài học 'đại đoàn kết toàn dân tộc' trong Cách mạng tháng Tám được thể hiện qua tổ chức nào?",o:["Đội Việt Nam Tuyên truyền Giải phóng quân","Mặt trận Việt Minh","Khu Giải phóng Việt Bắc","Ủy ban Khởi nghĩa Toàn quốc"],a:"Mặt trận Việt Minh",e:"Mặt trận Việt Minh là tổ chức tập hợp mọi tầng lớp nhân dân, mọi giai cấp, dân tộc, tôn giáo dưới ngọn cờ giải phóng dân tộc — biểu hiện sinh động nhất của bài học đại đoàn kết."},
+{t:"mc",q:"Nhân dân Việt Nam dưới sự lãnh đạo của Đảng đã lật đổ ách thống trị của thực dân Pháp trong bao nhiêu năm?",o:["Gần 50 năm","Gần 80 năm","Gần 100 năm","Hơn 100 năm"],a:"Gần 100 năm",e:"Pháp xâm lược Việt Nam từ năm 1858, Cách mạng tháng Tám 1945 chấm dứt ách thống trị đó sau gần 100 năm (1858–1945)."},
+{t:"tf",q:"Vai trò lãnh đạo của Đảng Cộng sản Việt Nam là nhân tố quyết định thắng lợi của Cách mạng tháng Tám.",a:true,e:"Đúng — với đường lối đúng đắn, sự quyết đoán và linh hoạt trong chỉ đạo, Đảng là nhân tố then chốt dẫn đến thắng lợi của Cách mạng tháng Tám."},
+{t:"mc",q:"Cách mạng tháng Tám 1945 mang ý nghĩa gì đối với nhân dân lao động Việt Nam?",o:["Được tăng lương","Lần đầu tiên nắm chính quyền, làm chủ đất nước","Được chia ruộng đất ngay lập tức","Không phải đi lính cho Pháp"],a:"Lần đầu tiên nắm chính quyền, làm chủ đất nước",e:"Cách mạng tháng Tám đưa nhân dân lao động từ thân phận nô lệ trở thành chủ nhân của đất nước — đây là ý nghĩa sâu sắc nhất đối với người dân Việt Nam."},
+{t:"mc",q:"Phong trào giải phóng dân tộc nào không được cổ vũ bởi thắng lợi của Cách mạng tháng Tám?",o:["Châu Á","Châu Phi","Mỹ Latinh","Châu Đại Dương"],a:"Châu Đại Dương",e:"Cách mạng tháng Tám cổ vũ mạnh mẽ phong trào giải phóng dân tộc chủ yếu ở châu Á, châu Phi và Mỹ Latinh — các khu vực thuộc địa và phụ thuộc trong thế kỷ XX."},
+{t:"tf",q:"Phương pháp cách mạng sáng tạo của Cách mạng tháng Tám là kết hợp đấu tranh chính trị với đấu tranh vũ trang.",a:true,e:"Đúng — Đảng không chỉ dựa vào vũ trang thuần túy mà kết hợp lực lượng chính trị quần chúng rộng rãi với lực lượng vũ trang, tạo nên sức mạnh tổng hợp không thể cưỡng lại."},
+{t:"mc",q:"Trong 5 bài học kinh nghiệm của Cách mạng tháng Tám, bài học nào được coi là nhân tố quyết định thắng lợi?",o:["Chớp thời cơ","Chuẩn bị lực lượng lâu dài","Đại đoàn kết toàn dân tộc","Sự lãnh đạo tuyệt đối của Đảng"],a:"Sự lãnh đạo tuyệt đối của Đảng",e:"Sự lãnh đạo của Đảng Cộng sản Việt Nam với đường lối đúng đắn, sự quyết đoán và linh hoạt là nhân tố hàng đầu, quyết định mọi thắng lợi của Cách mạng tháng Tám."},
+];
+const QN=["Vòng 1 · Cơ bản","Vòng 2 · Nâng cao","Vòng 3 · Chuyên sâu"];let qz={};
+function initQuiz(){const all=shuffle(MC);qz={rounds:[all.slice(0,15),all.slice(15,30),all.slice(30,45)],r:0,ts:0};sQR(0)}
+function sQR(r){qz.r=r;qz.qs=qz.rounds[r];qz.i=0;qz.sc=0;qz.d=false;rQ()}
+function rQ(){if(qz.i>=qz.qs.length){sQRR();return}const q=qz.qs[qz.i],p=Math.round(qz.i/qz.qs.length*100);let h=`<div style="text-align:center;margin-bottom:14px"><span class="round-tag rtag-sky">${QN[qz.r]}</span></div><div class="meta"><span>Câu ${qz.i+1}/${qz.qs.length}</span><span class="pts pts-sky">⭐ ${qz.sc}</span></div><div class="track"><div class="fill fill-sky" style="width:${p}%"></div></div><div class="gcard"><div class="qtext">${q.q}</div>`;
+if(q.t==='mc'){const o=shuffle(q.o);h+=`<div class="opts">${o.map(x=>`<button class="opt" onclick="pQ('${x.replace(/'/g,"&#39;")}')">${x}</button>`).join('')}</div>`}else h+=`<div class="tf-row"><button class="tf-btn yes" onclick="pQtf(true)">✔ Đúng</button><button class="tf-btn no" onclick="pQtf(false)">✘ Sai</button></div>`;
+h+=`<div id="qx"></div></div>`;document.getElementById('quizBox').innerHTML=h;qz.d=false}
+function pQ(c){if(qz.d)return;qz.d=true;const q=qz.qs[qz.i],ok=c===q.a;if(ok)qz.sc++;document.querySelectorAll('.opt').forEach(b=>{b.disabled=true;if(b.textContent===q.a)b.classList.add('ok');else if(b.textContent===c&&!ok)b.classList.add('no');else b.classList.add('dim')});sE(ok,q)}
+function pQtf(c){if(qz.d)return;qz.d=true;const q=qz.qs[qz.i],ok=c===q.a;if(ok)qz.sc++;document.querySelectorAll('.tf-btn').forEach(b=>b.disabled=true);sE(ok,q)}
+function sE(ok,q){document.getElementById('qx').innerHTML=`<div class="expl ${ok?'expl-ok':'expl-no'}"><strong>${ok?'✅ Chính xác!':'❌ Sai!'}</strong> ${q.e}</div><button class="btn-next btn-next-sky" onclick="qz.i++;rQ()">${qz.i+1>=qz.qs.length?'Kết quả 🏆':'Tiếp →'}</button>`}
+function sQRR(){qz.ts+=qz.sc;const p=Math.round(qz.sc/qz.qs.length*100),m=p>=80?'🥇':p>=60?'🥈':'🥉',hn=qz.r<2,nb=hn?`<button class="btn-go btn-sky" onclick="sQR(${qz.r+1})" style="margin-top:14px">${QN[qz.r+1]} ➜</button>`:`<div style="margin-top:16px;padding:16px;border-radius:14px;background:var(--sky-light);font-size:16px;font-weight:700;color:var(--sky);border:1px solid rgba(59,130,246,.2)">🏆 Hoàn thành! Tổng: ${qz.ts}/45</div>`;document.getElementById('quizBox').innerHTML=`<div class="res"><div class="res-icon">${m}</div><div class="res-h">${QN[qz.r]} — ${p>=80?'Xuất sắc!':p>=60?'Khá tốt!':'Ôn thêm!'}</div><div class="res-p">Đúng <strong>${qz.sc}/${qz.qs.length}</strong> — ${p}%</div><div class="stats"><div class="st"><div class="v" style="color:var(--mint)">${qz.sc}</div><div class="l">Đúng</div></div><div class="st"><div class="v" style="color:var(--coral)">${qz.qs.length-qz.sc}</div><div class="l">Sai</div></div></div>${nb}<br><button class="btn-o" onclick="initQuiz()">Từ đầu 🔄</button></div>`}
+
+/* ===== SORT ===== */
+const TL=[{ev:"Nhật vào Đông Dương",date:"9/1940",order:1},{ev:"Khởi nghĩa Bắc Sơn",date:"27/9/1940",order:2},{ev:"Thành lập Mặt trận Việt Minh",date:"19/5/1941",order:3},{ev:"Lập Đội Việt Nam Tuyên truyền Giải phóng quân",date:"22/12/1944",order:4},{ev:"Nhật đảo chính Pháp",date:"9/3/1945",order:5},{ev:"Hà Nội giành chính quyền",date:"19/8/1945",order:6},{ev:"Bảo Đại thoái vị",date:"23/8/1945",order:7},{ev:"Tuyên ngôn Độc lập",date:"2/9/1945",order:8}];
+let so={};
+function initSort(){so={items:shuffle([...TL]),placed:[],done:false,nextOrder:1};renderSort()}
+function renderSort(){
+  const pool=so.items.filter(x=>!so.placed.find(p=>p.order===x.order));
+  let h=`<div class="meta"><span>Sắp xếp niên biểu</span><span class="pts pts-amber">✅ ${so.placed.length}/8</span></div>`;
+  h+=`<div class="sort-instruction">💡 Click sự kiện <strong>xảy ra sớm nhất</strong> trong số còn lại</div>`;
+  h+=`<div class="tl-pool">${pool.map(x=>`<button class="tl-item" onclick="pickSort(${x.order})">${x.ev}</button>`).join('')}</div>`;
+  h+=`<div class="tl-slots">`;
+  so.placed.forEach((x,i)=>{h+=`<div class="tl-slot filled ${x.correct?'correct':'wrong'}"><span class="tl-order">${i+1}</span><span class="tl-val">${x.ev}</span><span class="tl-date">${x.date}</span></div>`});
+  for(let i=so.placed.length;i<8;i++)h+=`<div class="tl-slot"><span class="tl-order">${i+1}</span></div>`;
+  h+=`</div>`;
+  if(so.done){const c=so.placed.filter(x=>x.correct).length;h+=`<div class="res" style="margin-top:18px"><div class="res-icon">${c>=7?'🥇':c>=5?'🥈':'🥉'}</div><div class="res-h">${c>=7?'Xuất sắc!':c>=5?'Khá tốt!':'Thử lại nhé!'}</div><div class="res-p">Đúng vị trí: <strong>${c}/8</strong></div><button class="btn-go btn-amber" onclick="initSort()" style="margin-top:14px">Chơi lại 🔄</button></div>`}
+  document.getElementById('sortBox').innerHTML=h}
+function pickSort(order){if(so.done)return;const item=so.items.find(x=>x.order===order);so.placed.push({...item,correct:order===so.nextOrder});so.nextOrder++;if(so.placed.length>=8)so.done=true;renderSort()}
+
+/* ===== FLIP ===== */
+const FL=[{a:"Hội nghị Trung ương VIII",b:"Giải phóng dân tộc lên hàng đầu (5/1941)"},{a:"19/8/1945",b:"Hà Nội giành chính quyền"},{a:"Bảo Đại thoái vị",b:"23/8 Ngọ Môn, Huế"},{a:"Tuyên ngôn Độc lập",b:"2/9/1945, Quảng trường Ba Đình"},{a:"Đội Việt Nam Tuyên truyền Giải phóng quân",b:"34 chiến sĩ, 22/12/1944"},{a:"Khu Giải phóng Việt Bắc",b:"6 tỉnh, lập 6/1945"}];
+let fl={};
+function initFlip(){const cards=shuffle(FL.flatMap((p,i)=>[{id:i,side:'a',text:p.a},{id:i,side:'b',text:p.b}]));fl={cards,flipped:[],matched:new Set(),moves:0,lock:false};renderFlip()}
+function renderFlip(){
+  let h=`<div class="meta"><span>Tìm 6 cặp sự kiện ↔ mô tả</span><span class="pts" style="color:var(--violet)">🔄 ${fl.moves} lượt · ✅ ${fl.matched.size}/6</span></div><div class="flip-grid">`;
+  fl.cards.forEach((c,i)=>{const f=fl.flipped.includes(i)||fl.matched.has(c.id),m=fl.matched.has(c.id);h+=`<div class="flip-card${f?' flipped':''}${m?' matched':''}" onclick="flipCard(${i})"><div class="flip-inner"><div class="flip-front">?</div><div class="flip-back">${c.text}</div></div></div>`});
+  h+=`</div>`;
+  if(fl.matched.size===6)h+=`<div class="res" style="margin-top:18px"><div class="res-icon">🎉</div><div class="res-h">Hoàn thành!</div><div class="res-p"><strong>${fl.moves} lượt</strong>${fl.moves<=8?' — Trí nhớ tuyệt vời!':fl.moves<=12?' — Khá tốt!':' — Thử lại để cải thiện!'}</div><button class="btn-go btn-violet" onclick="initFlip()" style="margin-top:14px">Chơi lại 🔄</button></div>`;
+  document.getElementById('flipBox').innerHTML=h}
+function flipCard(i){if(fl.lock)return;const c=fl.cards[i];if(fl.matched.has(c.id)||fl.flipped.includes(i))return;fl.flipped.push(i);renderFlip();
+  if(fl.flipped.length===2){fl.lock=true;fl.moves++;const[a,b]=[fl.cards[fl.flipped[0]],fl.cards[fl.flipped[1]]];if(a.id===b.id&&a.side!==b.side){fl.matched.add(a.id);fl.flipped=[];fl.lock=false;renderFlip()}else setTimeout(()=>{fl.flipped=[];fl.lock=false;renderFlip()},900)}}
+</script>
+</body>
+</html>
