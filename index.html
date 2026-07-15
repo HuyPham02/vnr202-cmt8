@@ -504,7 +504,7 @@ section.active{display:block}
 </div>
 
 <script>
-function go(id){['know','quiz','sort','flip'].forEach(k=>{document.getElementById('s-'+k).classList.remove('active');document.getElementById('t-'+k).classList.remove('active')});document.getElementById('s-'+id).classList.add('active');document.getElementById('t-'+id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function go(id){['know','quiz','sort','flip'].forEach(k=>{document.getElementById('s-'+k).classList.remove('active');document.getElementById('t-'+k).classList.remove('active')});document.getElementById('s-'+id).classList.add('active');document.getElementById('t-'+id).classList.add('active')}
 function shuffle(a){return[...a].sort(()=>Math.random()-.5)}
 
 /* ===== TTS (Web Speech API) — Fixed Vietnamese ===== */
